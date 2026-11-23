@@ -36,7 +36,7 @@ export function BrandMark({
       {showText && (
         <div className={`leading-tight ${labelClassName}`}>
           <p className={`font-bold text-sm ${titleClassName}`}>Cổng Quản Trị</p>
-          <p className={`text-[11px] ${subtitleClassName}`}>UBND Xã Điện Bàn Tây</p>
+          <p className={`text-[11px] ${subtitleClassName}`}>UBND Xã Tân Hiệp</p>
         </div>
       )}
     </div>

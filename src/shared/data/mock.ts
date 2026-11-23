@@ -70,7 +70,7 @@ export const mockNews = [
     category: 'thong-bao',
     status: 'published',
     date: '2023-10-01',
-    source: 'Cổng TTĐT Xã Điện Bàn Tây',
+    source: 'Cổng TTĐT Xã Tân Hiệp',
     audience: 'all-citizens',
     linkType: 'external',
     linkUrl: 'https://dichvucong.gov.vn',
@@ -82,10 +82,10 @@ export const mockNews = [
       'Người dân trên địa bàn có thể đăng ký lịch làm CCCD gắn chip theo khung giờ tiếp nhận của bộ phận một cửa.',
     contentHtml: `
       <h2>Thông báo tiếp nhận hồ sơ</h2>
-      <p>UBND Xã Điện Bàn Tây thông báo triển khai tiếp nhận hồ sơ làm CCCD gắn chip cho công dân đủ điều kiện.</p>
+      <p>UBND Xã Tân Hiệp thông báo triển khai tiếp nhận hồ sơ làm CCCD gắn chip cho công dân đủ điều kiện.</p>
       <ul>
         <li>Thời gian: từ thứ 2 đến thứ 6 hằng tuần</li>
-        <li>Địa điểm: Bộ phận một cửa UBND Xã Điện Bàn Tây</li>
+        <li>Địa điểm: Bộ phận một cửa UBND Xã Tân Hiệp</li>
         <li>Hồ sơ: CMND/CCCD cũ, sổ hộ khẩu hoặc giấy tờ xác nhận cư trú</li>
       </ul>
       <p>Người dân vui lòng đến đúng lịch hẹn để được hỗ trợ nhanh chóng.</p>
@@ -120,7 +120,7 @@ export const mockNews = [
     category: 'khan-cap',
     status: 'published',
     date: '2023-10-10',
-    source: 'Trung tâm Y tế Xã Điện Bàn Tây',
+    source: 'Trung tâm Y tế Xã Tân Hiệp',
     audience: 'all-citizens',
     linkType: 'external',
     linkUrl: 'https://moh.gov.vn',
@@ -146,7 +146,7 @@ export const mockNews = [
     category: 'thong-bao',
     status: 'published',
     date: '2023-10-12',
-    source: 'Trạm Y tế Xã Điện Bàn Tây',
+    source: 'Trạm Y tế Xã Tân Hiệp',
     audience: 'residents',
     linkType: 'none',
     linkUrl: '',
@@ -156,7 +156,7 @@ export const mockNews = [
       'Trạm Y tế thông báo lịch tiêm chủng mở rộng trong tháng 11 dành cho trẻ em và các nhóm đối tượng ưu tiên.',
     contentHtml: `
       <h2>Thời gian tiêm chủng</h2>
-      <p>Lịch tiêm diễn ra tại Trạm Y tế Xã Điện Bàn Tây từ 8:00 đến 16:30 các ngày làm việc.</p>
+      <p>Lịch tiêm diễn ra tại Trạm Y tế Xã Tân Hiệp từ 8:00 đến 16:30 các ngày làm việc.</p>
       <p>Phụ huynh vui lòng mang theo sổ tiêm chủng và giấy khai sinh của trẻ.</p>
     `,
   },
@@ -293,7 +293,7 @@ export const mockCitizens = [
     household: 'Hộ ông Nguyễn Văn A',
     relationship: 'Vợ/chồng',
     status: 'published',
-    address: 'Khu phố 1, Xã Điện Bàn Tây',
+    address: 'Khu phố 1, Xã Tân Hiệp',
     notes: 'Tham gia tích cực hoạt động khu phố.',
     interactions: 5,
   },
@@ -312,7 +312,7 @@ export const mockCitizens = [
     household: 'Hộ bà Trần Thị B',
     relationship: 'Chủ hộ',
     status: 'published',
-    address: 'Khu phố 2, Xã Điện Bàn Tây',
+    address: 'Khu phố 2, Xã Tân Hiệp',
     notes: 'Đang chờ hỗ trợ thủ tục đất đai.',
     interactions: 2,
   },
@@ -331,7 +331,7 @@ export const mockCitizens = [
     household: 'Hộ ông Nguyễn Văn A',
     relationship: 'Con',
     status: 'published',
-    address: 'Khu phố 1, Xã Điện Bàn Tây',
+    address: 'Khu phố 1, Xã Tân Hiệp',
     notes: '-',
     interactions: 1,
   },
@@ -350,7 +350,7 @@ export const mockCitizens = [
     household: 'Hộ bà Trần Thị B',
     relationship: 'Khác',
     status: 'published',
-    address: 'Khu phố 3, Xã Điện Bàn Tây',
+    address: 'Khu phố 3, Xã Tân Hiệp',
     notes: 'Chủ hộ kinh doanh tạp hóa.',
     interactions: 4,
   },
@@ -369,7 +369,7 @@ export const mockCitizens = [
     household: 'Hộ ông Nguyễn Văn A',
     relationship: 'Con',
     status: 'published',
-    address: 'Khu phố 2, Xã Điện Bàn Tây',
+    address: 'Khu phố 2, Xã Tân Hiệp',
     notes: '-',
     interactions: 0,
   },
@@ -388,7 +388,7 @@ export const mockCitizens = [
     household: 'Hộ bà Trần Thị B',
     relationship: 'Chủ hộ',
     status: 'published',
-    address: 'Khu phố 4, Xã Điện Bàn Tây',
+    address: 'Khu phố 4, Xã Tân Hiệp',
     notes: 'Cựu chiến binh, sinh hoạt tại hội cựu chiến binh xã.',
     interactions: 3,
   },
@@ -406,7 +406,7 @@ export const mockRoutingRules = [
 export const mockRoutedItems = [
   {
     id: '1', date: '2023-10-24 09:12', sender: 'Lê Hoàng', phone: '0912340001', field: 'Môi trường',
-    title: 'Rác thải tồn đọng tại khu vực chợ', address: 'Gần chợ Điện Bàn Tây, Khu phố 1',
+    title: 'Rác thải tồn đọng tại khu vực chợ', address: 'Gần chợ Tân Hiệp, Khu phố 1',
     content: 'Rác thải sinh hoạt tồn đọng nhiều ngày chưa được thu gom, gây mùi hôi khó chịu cho các hộ dân xung quanh.',
     routedDepartment: 'Địa chính', routedStaff: 'Lê Văn C',
   },
@@ -473,7 +473,7 @@ export const mockFeedback = [
     ], assignedStaff: '',
   },
   {
-    id: '2', title: 'Đèn đường hư hỏng trước cổng chợ', content: 'Đèn đường trước cổng chợ Điện Bàn Tây đã tắt hơn một tuần, khu vực tối vào ban đêm gây mất an toàn giao thông.',
+    id: '2', title: 'Đèn đường hư hỏng trước cổng chợ', content: 'Đèn đường trước cổng chợ Tân Hiệp đã tắt hơn một tuần, khu vực tối vào ban đêm gây mất an toàn giao thông.',
     category: 'trat-tu', name: 'Nguyễn Thị Hoa', phone: '0912345678', address: 'Cổng chợ, Khu phố 2', location: 'Cổng chợ, Khu phố 2',
     privacy: 'public', status: 'processing', date: '2023-10-22', images: [
       feedbackStreetlight,
@@ -552,7 +552,7 @@ export const mockCitizenComments = [
     name: 'Bùi Hải Hà',
     zalo_user_id: '',
     phone: '0934826491',
-    address: 'Khu phố 1, Xã Điện Bàn Tây',
+    address: 'Khu phố 1, Xã Tân Hiệp',
     title: 'Đèn chiếu sáng ngõ 3 bị hỏng',
     content:
       'Đèn đường tại ngõ 3, khu phố 1 đã tắt gần một tuần, khu vực tối gây bất tiện cho việc đi lại buổi tối.',
@@ -585,7 +585,7 @@ export const mockCitizenComments = [
     name: 'Bùi Hải Hà',
     zalo_user_id: '',
     phone: '0934826491',
-    address: 'Khu phố 1, Xã Điện Bàn Tây',
+    address: 'Khu phố 1, Xã Tân Hiệp',
     title: 'Rác thải tồn đọng chưa thu gom',
     content:
       'Rác sinh hoạt tại đầu ngõ chưa được thu gom trong 3 ngày, gây mùi khó chịu cho các hộ xung quanh.',
@@ -610,7 +610,7 @@ export const mockCitizenComments = [
     name: 'Giàng A Phố',
     zalo_user_id: '',
     phone: '0982134590',
-    address: 'Khu phố 2, Xã Điện Bàn Tây',
+    address: 'Khu phố 2, Xã Tân Hiệp',
     title: 'Đề nghị hỗ trợ thủ tục đất đai',
     content:
       'Đề nghị cán bộ địa chính hướng dẫn thủ tục xác nhận ranh giới đất cho hộ gia đình.',
@@ -643,10 +643,10 @@ export const mockCitizenComments = [
     name: 'Mạnh Tuấn Nguyễn',
     zalo_user_id: '',
     phone: '0988777145',
-    address: 'Khu phố 3, Xã Điện Bàn Tây',
+    address: 'Khu phố 3, Xã Tân Hiệp',
     title: 'Phản ánh tụ tập gây ồn ào ban đêm',
     content:
-      'Khu vực gần chợ Điện Bàn Tây thường xuyên có nhóm thanh niên tụ tập gây ồn ào sau 22h.',
+      'Khu vực gần chợ Tân Hiệp thường xuyên có nhóm thanh niên tụ tập gây ồn ào sau 22h.',
     url: '',
     status: 0,
     time_create_number: 1700031600000,
@@ -668,7 +668,7 @@ export const mockCitizenComments = [
     name: 'Đỗ Duy Toàn',
     zalo_user_id: '',
     phone: '0908070605',
-    address: 'Khu phố 4, Xã Điện Bàn Tây',
+    address: 'Khu phố 4, Xã Tân Hiệp',
     title: 'Cống thoát nước bị nghẽn',
     content:
       'Cống thoát nước trước nhà bị nghẽn, nước tràn ra đường mỗi khi mưa lớn, đề nghị kiểm tra xử lý.',

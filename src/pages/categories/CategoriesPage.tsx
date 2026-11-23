@@ -17,6 +17,7 @@ import {
   TableRow,
 } from "../../shared/components/ui";
 import { Spinner } from "../../shared/components/ui/spinner";
+import { FEEDBACK_ENABLED } from "@/shared/config/features";
 import { Tabs, TabsList, TabsTrigger } from "@/shared/components/ui/tabs";
 import { categoryTypeLabel, categoryTypeOptions, type CategoryType } from "./types";
 import {
@@ -41,7 +42,7 @@ import {
 const PAGE_SIZE = 8;
 
 export default function CategoriesPage() {
-  const [activeType, setActiveType] = useState<CategoryType>("feedback");
+  const [activeType, setActiveType] = useState<CategoryType>(FEEDBACK_ENABLED ? "feedback" : "news");
   const [page, setPage] = useState(1);
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -160,7 +161,7 @@ export default function CategoriesPage() {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Danh mục</h1>
             <p className="mt-1 text-muted-foreground">
-              Quản lý danh mục dùng cho phản ánh và tin tức.
+              {FEEDBACK_ENABLED ? "Quản lý danh mục dùng cho phản ánh và tin tức." : "Quản lý danh mục dùng cho tin tức."}
             </p>
           </div>
           <Button onClick={openCreateDialog} className="gap-2 self-start">

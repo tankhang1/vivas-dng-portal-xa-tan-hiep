@@ -7,6 +7,7 @@ import { StatsOverviewCards } from "./components/StatsOverviewCards";
 import { StaffByFieldChart } from "./components/StaffByFieldChart";
 import { RecentNewsCard } from "./components/RecentNewsCard";
 import { FeaturedNewsCard } from "./components/FeaturedNewsCard";
+import { FEEDBACK_ENABLED } from "@/shared/config/features";
 import { LatestFeedbackCard } from "./components/LatestFeedbackCard";
 import {
   useAllNewsQuery,
@@ -67,7 +68,7 @@ export default function Dashboard() {
           <StaffByFieldChart data={staffByField} />
         </div> */}
 
-        <div className="grid gap-6 xl:grid-cols-3">
+        <div className={`grid gap-6 ${FEEDBACK_ENABLED ? "xl:grid-cols-3" : "xl:grid-cols-2"}`}>
           <RecentNewsCard
             items={recentNews}
             isLoading={isRecentNewsLoading}
@@ -78,10 +79,12 @@ export default function Dashboard() {
             isLoading={isFeaturedNewsLoading}
             showViewAll={isAdminRole}
           />
-          <LatestFeedbackCard
-            items={latestFeedback}
-            isLoading={isCommentsLoading}
-          />
+          {FEEDBACK_ENABLED && (
+            <LatestFeedbackCard
+              items={latestFeedback}
+              isLoading={isCommentsLoading}
+            />
+          )}
         </div>
       </div>
     </Layout>

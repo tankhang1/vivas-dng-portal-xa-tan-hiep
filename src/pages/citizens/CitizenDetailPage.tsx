@@ -39,6 +39,7 @@ import { useCitizenCommentsQuery } from "@/features/comment/hooks/comment.hook";
 import type { CommentItem } from "@/features/comment/types/get-comment.response";
 import { useCitizenProfileQuery } from "@/features/citizen/hooks/citizen.hook";
 import { useFeedbackQuery } from "@/features/feedback/hooks/feedback.hook";
+import { FEEDBACK_ENABLED } from "@/shared/config/features";
 import { Spinner } from "../../shared/components/ui/spinner";
 
 type CitizenComment = CommentItem;
@@ -207,8 +208,8 @@ export default function CitizenDetailPage({
           </div>
         </div>
 
-        <div className="grid gap-5 xl:grid-cols-10">
-          <Card className="xl:col-span-5">
+        <div className={`grid gap-5 ${FEEDBACK_ENABLED ? "xl:grid-cols-10" : ""}`}>
+          <Card className={`${FEEDBACK_ENABLED ? "xl:col-span-5" : ""}`}>
             <CardContent className="space-y-6 pt-6">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <Avatar className="h-16 w-16">
@@ -251,6 +252,7 @@ export default function CitizenDetailPage({
             </CardContent>
           </Card>
 
+          {FEEDBACK_ENABLED && (
           <Card className="xl:col-span-5">
             <CardHeader className="border-b border-border">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -316,6 +318,7 @@ export default function CitizenDetailPage({
               )}
             </CardContent>
           </Card>
+          )}
         </div>
       </div>
 

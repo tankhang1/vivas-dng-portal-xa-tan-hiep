@@ -20,6 +20,7 @@ import {
   Phone,
   CalendarClock,
 } from 'lucide-react';
+import { FEEDBACK_ENABLED } from '@/shared/config/features';
 import { Button, cn, Dialog, DialogFooter, DialogHeader, DialogTitle } from './ui';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './ui/collapsible';
 import {
@@ -91,10 +92,24 @@ const navItems: NavItem[] = [
   },
 ];
 
-function getVisibleNavItems(isAdmin: boolean): NavItem[] {
-  if (isAdmin) return navItems;
+function isFeedbackHref(href: string) {
+  return href === '/feedback' || href === '/routing/feedback';
+}
 
-  return navItems.reduce<NavItem[]>((visible, item) => {
+const enabledNavItems: NavItem[] = FEEDBACK_ENABLED
+  ? navItems
+  : navItems
+      .map((item) =>
+        isGroupItem(item)
+          ? { ...item, children: item.children.filter((c) => !isFeedbackHref(c.href)) }
+          : item,
+      )
+      .filter((item) => (isGroupItem(item) ? item.children.length > 0 : !isFeedbackHref(item.href)));
+
+function getVisibleNavItems(isAdmin: boolean): NavItem[] {
+  if (isAdmin) return enabledNavItems;
+
+  return enabledNavItems.reduce<NavItem[]>((visible, item) => {
     if (isGroupItem(item)) {
       const children = item.menuKey === 'internal' ? item.children : [];
       if (children.length) visible.push({ ...item, children });
@@ -312,7 +327,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
             <div className="hidden md:flex flex-1">
               <h1 className="text-lg font-semibold text-foreground">
-                Ủy ban Nhân dân Xã Điện Bàn Tây
+                Ủy ban Nhân dân Xã Tân Hiệp
               </h1>
             </div>
             <div className="flex items-center gap-4">

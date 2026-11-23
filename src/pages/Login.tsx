@@ -66,7 +66,7 @@ export default function Login() {
           </div>
           <div>
             <CardTitle className="text-2xl font-bold">Cổng Quản Trị Hệ Thống</CardTitle>
-            <CardDescription className="text-base mt-1">Ủy ban Nhân dân Xã Điện Bàn Tây</CardDescription>
+            <CardDescription className="text-base mt-1">Ủy ban Nhân dân Xã Tân Hiệp</CardDescription>
           </div>
         </CardHeader>
         <CardContent>

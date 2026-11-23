@@ -1,3 +1,5 @@
+import { FEEDBACK_ENABLED } from '@/shared/config/features';
+
 export type CategoryType = 'feedback' | 'news';
 
 export type CategoryRecord = {
@@ -8,9 +10,9 @@ export type CategoryRecord = {
 };
 
 export const categoryTypeOptions: { value: CategoryType; label: string }[] = [
-  { value: 'feedback', label: 'Phản ánh' },
-  { value: 'news', label: 'Tin tức' },
-];
+  { value: 'feedback' as CategoryType, label: 'Phản ánh' },
+  { value: 'news' as CategoryType, label: 'Tin tức' },
+].filter((item) => FEEDBACK_ENABLED || item.value !== 'feedback');
 
 export function categoryTypeLabel(type: CategoryType) {
   return categoryTypeOptions.find((item) => item.value === type)?.label ?? type;

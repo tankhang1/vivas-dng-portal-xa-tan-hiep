@@ -18,6 +18,7 @@ import CitizensCreate from "@/pages/citizens/Create";
 import CitizenDetail from "@/pages/citizens/Detail";
 import CitizensEdit from "@/pages/citizens/Edit";
 import Feedback from "@/pages/Feedback";
+import { FEEDBACK_ENABLED } from "@/shared/config/features";
 import QueueTickets from "@/pages/queue-tickets/QueueTicketsPage";
 import GeneralSettingsPage from "@/pages/settings/GeneralSettingsPage";
 import HotlinePage from "@/pages/settings/hotline/HotlinePage";
@@ -110,22 +111,22 @@ function Router() {
       </Route>
       <Route path="/routing/list">
         <RoleGate adminOnly>
-          <Redirect to="/routing/feedback" />
+          <Redirect to={FEEDBACK_ENABLED ? "/routing/feedback" : "/routing/schedule"} />
         </RoleGate>
       </Route>
       <Route path="/routing/setup">
         <RoleGate adminOnly>
-          <Redirect to="/routing/feedback" />
+          <Redirect to={FEEDBACK_ENABLED ? "/routing/feedback" : "/routing/schedule"} />
         </RoleGate>
       </Route>
       <Route path="/routing">
         <RoleGate adminOnly>
-          <Redirect to="/routing/feedback" />
+          <Redirect to={FEEDBACK_ENABLED ? "/routing/feedback" : "/routing/schedule"} />
         </RoleGate>
       </Route>
       <Route path="/routing/feedback">
         <RoleGate adminOnly>
-          <RoutingPage />
+          {FEEDBACK_ENABLED ? <RoutingPage /> : <Redirect to="/routing/schedule" />}
         </RoleGate>
       </Route>
       <Route path="/routing/schedule">
@@ -133,7 +134,9 @@ function Router() {
           <RoutingSchedulePage />
         </RoleGate>
       </Route>
-      <Route path="/feedback" component={Feedback} />
+      <Route path="/feedback">
+        {FEEDBACK_ENABLED ? <Feedback /> : <Redirect to="/dashboard" />}
+      </Route>
       <Route path="/queue">
         <Redirect to="/appointments" />
       </Route>
