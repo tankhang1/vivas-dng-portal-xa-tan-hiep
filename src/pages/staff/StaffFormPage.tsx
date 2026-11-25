@@ -72,10 +72,13 @@ const staffFormBaseSchema = z.object({
 const staffCreateSchema = staffFormBaseSchema.extend({
   field: z.string().min(1, "Vui lòng chọn lĩnh vực"),
   avatar: z.array(mediaFileSchema).min(1, "Vui lòng chọn ảnh đại diện"),
-  password: z.string().trim().min(1, "Vui lòng nhập mật khẩu"),
+  // password: z.string().trim().min(1, "Vui lòng nhập mật khẩu"),
 });
 
 const staffEditSchema = staffFormBaseSchema;
+
+/** Mật khẩu mặc định khi tạo cán bộ mới (đã ẩn field mật khẩu). */
+const DEFAULT_STAFF_PASSWORD = "TanHiep@Vivas@2026";
 
 type StaffFormValues = z.infer<typeof staffFormBaseSchema>;
 
@@ -222,7 +225,7 @@ export function StaffFormPage({ mode, staffId }: StaffFormPageProps) {
           department_name: department?.name ?? "",
           division_item: division?.id ?? 0,
           division_name: division?.name ?? "",
-          password: values.password,
+          password: DEFAULT_STAFF_PASSWORD,
         });
       }
       navigate("/staff");
@@ -448,6 +451,7 @@ export function StaffFormPage({ mode, staffId }: StaffFormPageProps) {
                   />
                 </div>
 
+                {/* Ẩn field mật khẩu — dùng DEFAULT_STAFF_PASSWORD
                 {mode === "create" && (
                   <div className="grid gap-2">
                     <Label htmlFor="staff-password">
@@ -469,6 +473,7 @@ export function StaffFormPage({ mode, staffId }: StaffFormPageProps) {
                     <FieldError message={errors.password?.message} />
                   </div>
                 )}
+                */}
               </div>
             </CardContent>
           </Card>

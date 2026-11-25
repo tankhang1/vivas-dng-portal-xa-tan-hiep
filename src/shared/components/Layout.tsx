@@ -71,7 +71,7 @@ const navItems: NavItem[] = [
   },
   { name: 'Công dân', href: '/citizens', icon: BookUser },
   { name: 'Phản ánh - Kiến nghị', href: '/feedback', icon: MessageSquareWarning },
-  { name: 'Đặt lịch hẹn', href: '/appointments', icon: CalendarClock },
+  // { name: 'Đặt lịch hẹn', href: '/appointments', icon: CalendarClock },
   // {
   //   name: 'Điều phối',
   //   menuKey: 'routing',
