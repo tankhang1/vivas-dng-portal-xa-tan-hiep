@@ -72,15 +72,15 @@ const navItems: NavItem[] = [
   { name: 'Công dân', href: '/citizens', icon: BookUser },
   { name: 'Phản ánh - Kiến nghị', href: '/feedback', icon: MessageSquareWarning },
   { name: 'Đặt lịch hẹn', href: '/appointments', icon: CalendarClock },
-  {
-    name: 'Điều phối',
-    menuKey: 'routing',
-    icon: Waypoints,
-    children: [
-      { name: 'Phản ánh - kiến nghị', href: '/routing/feedback', icon: MessageSquareWarning },
-      { name: 'Đặt lịch hẹn', href: '/routing/schedule', icon: CalendarClock },
-    ],
-  },
+  // {
+  //   name: 'Điều phối',
+  //   menuKey: 'routing',
+  //   icon: Waypoints,
+  //   children: [
+  //     { name: 'Phản ánh - kiến nghị', href: '/routing/feedback', icon: MessageSquareWarning },
+  //     { name: 'Đặt lịch hẹn', href: '/routing/schedule', icon: CalendarClock },
+  //   ],
+  // },
   {
     name: 'Cài đặt',
     menuKey: 'settings',
